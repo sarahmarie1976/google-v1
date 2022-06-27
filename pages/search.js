@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import SearchHeader from '../components/SearchHeader';
+import SearchHeaderOptions from '../components/SearchHeaderOptions';
 
 export default function search() {
   return (
@@ -14,7 +15,7 @@ export default function search() {
 
       {/* Search Results */}
 
-
+        <SearchHeaderOptions />
 
 
     </div>

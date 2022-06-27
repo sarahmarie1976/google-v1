@@ -9,10 +9,10 @@ export default function SearchHeader() {
   const searchInputRef = useRef(null);
 
   function search(event) {
-    event.defaultValue();
+    event.preventDefault();
     const term = searchInputRef.current.value;
     if (!term.trim()) return;
-    router.push(`/search?term=${term.trim()}`)
+    router.push(`/search?term=${term.trim()}&searchType=`);
   }
 
   return (
@@ -36,7 +36,7 @@ export default function SearchHeader() {
             className='w-full focus:outline-none'
           />
           <XIcon
-            onClick={() => (searchInputRef.current.value = '')}
+            onClick={() => (searchInputRef.current.value = "")}
             className='h-7 text-gray-500 cursor-pointer sm:mr-3'
           />
           <MicrophoneIcon className='h-6 hidden sm:inline-flex text-blue-500 pl-4 border-l-2 border-gray-300 mr-3' />

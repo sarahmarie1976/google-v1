@@ -14,8 +14,8 @@ export default function Home() {
   function search(event) {
     event.preventDefault();
     const term = searchInputRef.current.value;
-    if (!term.trim()) return
-    router.push(`/search?term=${term.trim()}`)
+    if (!term.trim()) return;
+    router.push(`/search?term=${term.trim()}&searchType=`);
   }
 
   return (
@@ -57,7 +57,7 @@ export default function Home() {
           <button onClick={search} className='btn'>
             Google Search
           </button>
-          <button className='btn'>I'm Feeling Lucky</button>
+          <button className='btn'>I&apos;m  Feeling Lucky</button>
         </div>
       </form>
 
